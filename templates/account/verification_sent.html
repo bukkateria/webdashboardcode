@@ -1,0 +1,107 @@
+{% extends "base.html" %}
+
+{% load i18n %}
+
+{% block head_title %}{% trans "Verify Your E-mail Address" %}{% endblock %}
+
+{% block css %}
+<style>
+    .digit-group input {
+        width: 60px;
+        height: 60px;
+        background-color: #fff;
+        border: none;
+        line-height: 50px;
+        text-align: center;
+        font-size: 24px;
+        font-family: "Raleway", sans-serif;
+        font-weight: 200;
+        color: black;
+        margin: 0 2px;
+        border: 1px solid #ccc;
+    }
+
+    .digit-group .splitter {
+        padding: 0 5px;
+        color: black;
+        font-size: 24px;
+    }
+
+    .prompt {
+        margin-bottom: 20px;
+        font-size: 20px;
+        color: black;
+    }
+</style>
+{% endblock css %}
+
+{% block content %}
+
+{% comment %} <div class="section tw-my-36">
+    <h2 class="text-center tw-font-normal ">{% trans "Enter Your OTP" %}</h2>
+    <div class="container p-8 tw-flex tw-justify-center tw-items-center tw-flex-col">
+
+        <div class=" tw-px-5 tw-py-5 tw-shadow tw-max-w-3xl">
+            <form method="post" class="digit-group" data-group-name="digits" data-autosubmit="false" autocomplete="off">
+                <input type="text" id="digit-1" name="digit-1" data-next="digit-2" />
+                <input type="text" id="digit-2" name="digit-2" data-next="digit-3" data-previous="digit-1" />
+                <input type="text" id="digit-3" name="digit-3" data-next="digit-4" data-previous="digit-2" />
+                <span class="splitter">&ndash;</span>
+                <input type="text" id="digit-4" name="digit-4" data-next="digit-5" data-previous="digit-3" />
+                <input type="text" id="digit-5" name="digit-5" data-next="digit-6" data-previous="digit-4" />
+                <input type="text" id="digit-6" name="digit-6" data-previous="digit-5" />
+                <div class="tw-flex tw-justify-center tw-mt-6">
+                    <button
+                        class="tw-px-4 tw-py-2 tw-text-white tw-transition-colors tw-duration-200 tw-transform tw-bg-primary tw-rounded-md tw-hover:tw-bg-gray-600 focus:tw-outline-none focus:tw-bg-gray-600">Verify
+                        OTP</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div> {% endcomment %}
+
+
+<div class="section tw-my-36">
+    <div class="container p-8">
+        <h2 class="text-center tw-font-normal ">{% trans "Verify Your E-mail Address" %}</h2>
+        <div class="tw-grid tw-max-w-2xl mx-auto tw-shadow bg-white p-10 ">
+            <p class="text-lg tw-p-5">{% blocktrans %}We have sent an e-mail to you for verification. Follow the link
+                provided to finalize the signup process. Please contact us if you do not receive it within a few
+                minutes.
+                <b>Please check your spam folder if the email is not in your inbox</b>
+                {% endblocktrans %}
+            </p>
+        </div>
+    </div>
+</div> 
+
+{% endblock content %}
+{% comment %} 
+{% block js %}
+<script>
+    $('.digit-group').find('input').each(function () {
+        $(this).attr('maxlength', 1);
+        $(this).on('keyup', function (e) {
+            var parent = $($(this).parent());
+
+            if (e.keyCode === 8 || e.keyCode === 37) {
+                var prev = parent.find('input#' + $(this).data('previous'));
+
+                if (prev.length) {
+                    $(prev).select();
+                }
+            } else if ((e.keyCode >= 48 && e.keyCode <= 57) || (e.keyCode >= 65 && e.keyCode <= 90) || (e.keyCode >= 96 && e.keyCode <= 105) || e.keyCode === 39) {
+                var next = parent.find('input#' + $(this).data('next'));
+
+                if (next.length) {
+                    $(next).select();
+                } else {
+                    if (parent.data('autosubmit')) {
+                        parent.submit();
+                    }
+                }
+            }
+        });
+    });
+</script>
+{% endblock js %} {% endcomment %}

@@ -1,0 +1,36 @@
+{% extends 'auth_base.html' %}
+{% load widget_tweaks %}
+
+{% block content %}
+<div class="login-box">
+    <!-- /.login-logo -->
+    <div class="card card-outline card-primary">
+        <div class="card-header text-center">
+            <h1>Admin</h1>
+        </div>
+        <div class="card-body">
+            <form method="post" action="{% url 'dashboard:login' %}" novalidate>
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label for="username" class="form-label">Email</label>
+                    {% render_field form.login class="form-control" placeholder="Email Address" %}
+                    <small class="test tw-text-red-500">{{ form.login.errors }}</small>
+                  </div>
+                <div class="mb-3">
+                    <label class="form-label" for="password-input">Password</label>
+                        {% render_field form.password class="form-control pe-5" placeholder="Password" id="password-input" %}
+                        <small class="test tw-text-red-500">{{ form.password.errors }}</small>
+                </div>
+
+                <div class="social-auth-links text-center mt-2 mb-3">
+                    <button type="submit" class="btn btn-block btn-primary">
+                         Signin
+                    </button>
+                </div>
+            </form>
+        </div>
+        <!-- /.card-body -->
+    </div>
+    <!-- /.card -->
+</div>
+{% endblock content %}

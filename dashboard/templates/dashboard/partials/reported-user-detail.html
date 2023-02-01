@@ -1,0 +1,18 @@
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="exampleModalLabel">Reported User Detail</h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+        <b>Post ID:</b> {{ detail.postId }}<br>
+        <b>Reason:</b> {{ detail.reson }}<br>
+        <b>Reported By:</b> {{ detail.reportedBy }}<br>
+        <b>Reported User:</b> {{ detail.reportedUser }}<br>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      {% comment %} <button type="button" class="btn btn-primary">Save changes</button> {% endcomment %}
+    </div>
+  </div>

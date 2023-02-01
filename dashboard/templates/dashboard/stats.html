@@ -1,0 +1,75 @@
+<div class="row">
+    <div class="col-xl-3 col-lg-6 col-12">
+        <div class="card pull-up">
+            <div class="card-content">
+                <div class="card-body">
+                    <div class="media d-flex">
+                        <div class="media-body text-left">
+                            <h3 class="info">{{ users_count }}</h3>
+                            <h6>Users</h6>
+                        </div>
+                        <div>
+                            <i class="icon-user-follow info font-large-2 float-right"></i>
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-3 col-lg-6 col-12">
+        <div class="card pull-up">
+            <div class="card-content">
+                <div class="card-body">
+                    <div class="media d-flex">
+                        <div class="media-body text-left">
+                            <h3 class="warning">{{ recipes_count }}</h3>
+                            <h6>Recipe Posts</h6>
+                        </div>
+                        <div>
+                            {% comment %} <i class="icon-pie-chart warning font-large-2 float-right"></i> {% endcomment %}
+                            <i class="icon-la-cutlery warning font-large-2 float-right"></i>
+                        </div>
+                    </div>
+                  
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-3 col-lg-6 col-12">
+        <div class="card pull-up">
+            <div class="card-content">
+                <div class="card-body">
+                    <div class="media d-flex">
+                        <div class="media-body text-left">
+                            <h3 class="success">{{ menus_count }}</h3>
+                            <h6>Menu Posts</h6>
+                        </div>
+                        <div>
+                            <i class="icon-user-follow success font-large-2 float-right"></i>
+                        </div>
+                    </div>
+                
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-3 col-lg-6 col-12">
+        <div class="card pull-up">
+            <div class="card-content">
+                <div class="card-body">
+                    <div class="media d-flex">
+                        <div class="media-body text-left">
+                            <h3 class="danger">{{ orders_count }}</h3>
+                            <h6>Orders</h6>
+                        </div>
+                        <div>
+                            <i class="icon-basket-loaded danger font-large-2 float-right"></i>
+                        </div>
+                    </div>
+                
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

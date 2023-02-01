@@ -1,0 +1,32 @@
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="exampleModalLabel">User Detail</h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <div class="row">
+        <div class="col-4">
+          <img src="{{ user_detail.image }}" class="img-fluid" width=200 height=200 alt=""/><br>
+
+        </div>
+        <div class="col-8">
+          <b>UID:</b> {{ user_detail.uid }}<br>
+          <b>Phone:</b> {{ user_detail.phone }}<br>
+          <b>Token:</b> {{ user_detail.token }}<br>
+          <b>User Type:</b> {{ user_detail.userType }}<br>
+          <b>Username:</b> {{ user_detail.username }}<br>
+          <b>Name:</b> {{ user_detail.name }}<br>
+          <b>Email:</b> {{ user_detail.email }}<br>
+          <b>Address:</b> {{ user_detail.address }}<br>
+          <b>Notification:</b> {{ user_detail.notification }}
+        </div>
+
+      </div>
+
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+    </div>
+  </div>

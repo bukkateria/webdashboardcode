@@ -1,0 +1,25 @@
+<div class="modal-content">
+  <form enctype="multipart/form-data" 
+    hx-post="{% url 'dashboard:create_ad' %}"
+    hx-headers='{"X-CSRFToken":"{{ csrf_token }}"}'
+    hx-target="#detail-modal-dialog"
+  >
+    <div class="modal-header">
+      <h5 class="modal-title" id="exampleModalLabel">Create Ad</h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <div class="row">
+        <div class="col-12">
+          <input type="file" name="ad-file" class="form-control" placeholder="Select file" />
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      <button type="submit" class="btn btn-primary">Create Ad</button>
+    </div>
+  </form>
+</div>

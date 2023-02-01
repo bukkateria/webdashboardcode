@@ -1,0 +1,71 @@
+{% load static %}
+<div class="main-menu menu-fixed menu-dark menu-accordion    menu-shadow " data-scroll-to-active="true">
+    <div class="main-menu-content">
+        <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
+            <li class=" nav-item">
+                <a href="{% url 'dashboard:home' %}">
+                    {% comment %} <i class="la la-shopping-cart"></i> {% endcomment %}
+                    <span class="menu-title" data-i18n="Users">Dashboard</span>
+                </a>
+            </li>
+            <li class=" nav-item">
+                <a href="#">
+                    {% comment %} <i class="la la-briefcase"></i> {% endcomment %}
+                    <span class="menu-title" data-i18n="Posts">Posts</span>
+                </a>
+                <ul class="menu-content">
+                    <li>
+                        <a class="menu-item" href="{% url 'dashboard:menus' %}">
+                            <i></i><span data-i18n="Menus">Menus</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="menu-item" href="{% url 'dashboard:recipes' %}">
+                            <i></i><span data-i18n="Recipes">Recipes </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="menu-item" href="{% url 'dashboard:explore' %}">
+                            <i></i><span data-i18n="Explore">Explore</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class=" nav-item">
+                <a href="{% url 'dashboard:users' %}">
+                    {% comment %} <i class="la la-shopping-cart"></i> {% endcomment %}
+                    <span class="menu-title" data-i18n="Users">Users</span>
+                </a>
+            </li>
+            <li class=" nav-item">
+                <a href="{% url 'dashboard:orders' %}">
+                    {% comment %} <i class="la la-plane"></i> {% endcomment %}
+                    <span class="menu-title" data-i18n="Orders">Orders</span>
+                </a>
+            </li>
+            <li class=" nav-item">
+                <a href="{% url 'dashboard:blocked_requests' %}">
+                    {% comment %} <i class="la la-stethoscope"></i> {% endcomment %}
+                    <span class="menu-title" data-i18n="Blocked Requests">Blocked Requests</span>
+                </a>
+            </li>
+            <li class=" nav-item">
+                <a href="{% url 'dashboard:ads' %}">
+                    {% comment %} <i class="la la-bitcoin"></i> {% endcomment %}
+                    <span class="menu-title" data-i18n="Crypto">Manage Ads</span>
+                </a>
+            </li>
+            <li class=" nav-item">
+                <a href="{% url 'dashboard:notifications' %}">
+                    {% comment %} <i class="la la-tag"></i> {% endcomment %}
+                    <span class="menu-title" data-i18n="Manage Notification">Manage Notification</span>
+                </a>
+            </li>
+            <!-- <li class=" nav-item"><a href="../bank-menu-template" target="_blank"><i class="la la-bank"></i><span
+                        class="menu-title" data-i18n="Bank">Bank</span></a>
+            </li> -->
+
+
+        </ul>
+    </div>
+</div>
